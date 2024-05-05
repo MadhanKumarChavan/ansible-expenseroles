@@ -12,7 +12,7 @@
     - name: create file (new file)
       ansible.builtin.file:
        path: "{{app_location}}"
-       state: absent
+       state: present
 
 #download old content
        
