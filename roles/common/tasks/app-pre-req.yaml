@@ -1,0 +1,23 @@
+#delete old folder
+
+
+    - name: Remove file (old file)
+      ansible.builtin.file:
+       path: "{{app_location}}"
+       state: absent
+      ignore_errors: yes
+
+#create new folder
+
+    - name: create file (new file)
+      ansible.builtin.file:
+       path: "{{app_location}}"
+       state: absent
+
+#download old content
+       
+    - name: download and Unarchive file
+      ansible.builtin.unarchive:
+        src: https://expense-builds.s3.us-east-1.amazonaws.com/expense-{{ component }}-v2.zip
+        dest: "{{app_location}}"
+        remote_src: yes
