@@ -2,4 +2,4 @@ login_user: root
 login_host: "db.devopsm26.online"
 login_password: ExpenseApp@1
 app_location: /app
-component: "backend"
+component: backend
