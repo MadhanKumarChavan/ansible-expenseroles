@@ -1,0 +1,6 @@
+- name: database server
+  hosts: backend
+  become: yes
+  
+  roles:
+   - backend
